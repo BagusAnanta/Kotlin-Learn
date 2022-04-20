@@ -20,6 +20,13 @@ fun main(){
     // Kalo cuma nama,tanggal keluar,Kelas
     data_siswa("Bocil Nakal", Tanggal_keluar = 20, Kelas = "10.6")
 
+    // contoh optional Argument lain
+    val kali  = hitung_nilai(1,2, Symbol = "*")
+    println("Hasil kali = $kali") // 0 karena z = 0, makannya dia hasilnya 0 bukan 2
+
+    val tambah = hitung_nilai(2,2,3,"+")
+    println("Hasil tambah = $tambah")
+
 
 }
 
@@ -61,6 +68,8 @@ fun data (Nama : String?,Umur : Int?){
 // optional Argument dapat digunakan apabila parameternya mempunyai nilai default (Default Value)
 // untuk pakai optional Argument parameter fungsinya harus ada nilainya dulu
 // untuk pakai optional Argument juga harus pakai Named Argument supaya kotlinnya ngak bingung (Liat di fungsi mainnya / fun main()
+
+// optional Aargument (Contoh 1)
 fun data_siswa(Nama : String = "Tidak Diketahui", Tanggal_masuk : Int = 1,Tanggal_keluar : Int = 30, Kelas : String = "12"){
     println("""
         - Nama siswa : $Nama
@@ -68,5 +77,21 @@ fun data_siswa(Nama : String = "Tidak Diketahui", Tanggal_masuk : Int = 1,Tangga
         - Tanggal Keluar : $Tanggal_keluar
         - Kelas : $Kelas
     """.trimIndent())
+}
+
+// contoh optional argument (Contoh 2)
+fun hitung_nilai(x : Int = 0, y : Int = 0, z : Int = 0, Symbol : String? = "+") : Int {
+
+    var result : Int = 0
+
+    when(Symbol){
+        "+" -> result = x+y+z
+        "-" -> result = x-y-z
+        "*" -> result = x*y*z
+        "/" -> result = x/y/z
+
+        else -> println("Non matched operation")
+    }
+    return result
 }
 
