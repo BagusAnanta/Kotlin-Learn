@@ -28,6 +28,18 @@ fun main(){
     println("Hasil tambah = $tambah")
 
 
+    // Infix function and infix notation
+    val Infix = Infix_function()
+    val result1 = Infix.pangkat(2) // dipanggil kayak fungsi biasa
+    println("Result1 = $result1")
+
+    val result2 = Infix pangkat 2 // dengan infix keyword/gaya infix/infix notation
+    println("Result2 = $result2")
+
+    // generic type
+    val data = genericdata(100) // otomatis T nya akan dibaca menjadi Int
+    val data1 = genericdata<Int>(100) // ini juga sama, akan tetapi kita yang mendeklarasikannya
+
 }
 
 // single expression kotlin
@@ -93,5 +105,12 @@ fun hitung_nilai(x : Int = 0, y : Int = 0, z : Int = 0, Symbol : String? = "+") 
         else -> println("Non matched operation")
     }
     return result
+}
+
+// generic function
+// T itu maksudnya keyword kunci doang, boleh selai T kayak U,V,K,Y dll (Keyword nya mendeklarasikan tipe data nanti yang ingin dimasukkan)
+// T pada generic function hanya bisa di akses hanya fungsi itu saja, kecuali generic class (yang akan dipelajari selanjutnya)
+fun <T> genericdata(data1 : T){
+    println("data saya : $data1")
 }
 
