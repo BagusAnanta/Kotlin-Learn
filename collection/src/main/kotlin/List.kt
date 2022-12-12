@@ -2,6 +2,13 @@ fun main(){
     // List
     // Sama kayak Array
 
+    //TODO: List iu dibagi menjadi dua ada yang bisa dirubah (Mutable) ada juga juga yang tidak bisa dirubah (Immutable)
+
+    // TODO: Contoh List yang bisa dirubah
+    val data_angka = mutableListOf(1,2,3,4,5,6) //TODO -> List ini bersifat muttable (Dapat dirubah)
+    val data_nama = listOf("Fanny","Lydia","Ana","Julian") //TODO -> List ini bersifat immutable (Tidak dapat dirubah)
+
+
     //listof() untuk mode hanya read only
     val data = listOf<Int>(1,2,3,4,5,6,1)
     println(data)

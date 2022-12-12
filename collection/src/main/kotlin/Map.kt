@@ -8,5 +8,6 @@ fun main(){
     println("Jumlah Kelas/key kelas : ${nama_siswa.keys}")// jadi kalo key nya double dia bakal dihitung 1 (Kayak set tadi)
     println("Nama : ${nama_siswa.values}") // bakal print nama (Menariknya, yang di print hanya sekali jika terjadi duplikasi (duplikasi key nya)
 
+    // TODO: Map bisa kita jadikan Mutable (toMutableMap()) dan menggunakan fungsi put() atau Immutable, namun perlu disarankan gunakan Map dalam keadaan immutable sebisa mungkin
 
 }

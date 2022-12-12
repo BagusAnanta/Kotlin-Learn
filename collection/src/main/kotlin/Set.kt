@@ -17,4 +17,8 @@ fun main(){
     val deletion = data_DNA.remove("CTT") // bakal remove kodon CTT
     println(data_DNA)
 
+    // TODO: Catatan, Set bisa bersifat mutable dan Imutable akan tetapi pada saat kita menggunakan Mutable (mutablesetof()) kita tidak bisa merubah isinya
+    val mutablesetdata = mutableSetOf(1,2,2,3,4,5,5,1)
+   // mutablesetdata[1] = 2 tidak bisa dirubah, cuma bisa di add,remove
+
 }
